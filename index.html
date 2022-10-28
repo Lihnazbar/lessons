@@ -1,39 +1,222 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Курс Frontend</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="else/lessons/img/favicon/favicon-html.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+        
+        <style>
+            .list-links {
+                margin-top: -10px;
+            }
+            .list-links a:first-child,
+            .list-links a {
+                padding: 6px 30px !important;
+                font-size: 18px;
+            }
+            body {
+                font-family: 'Source Sans Pro', sans-serif;
+                padding-bottom: 100px;
+                margin: 0;
+            }
 
-	<form class="js-send-form default-style" id="test-id">
+            a {
+                text-decoration: none;
+                color: #3f3fc9;
+            }
 
-		<div class="form-wrapper">
-			<br>
-			<div class="js-validation">
-				<input type="text" name="sendEmail" placeholder="Кому?" required>
-				<span></span>
-			</div>
-			<br> <input type="text" name="name" placeholder="Ім'я"required>
-			<br>
-			<div class="js-validation">
-				<input type="email" name="email" placeholder="Від кого?" required>
-				<span></span>
-			</div>
-			<br> <input type="text" name="subject" placeholder="Яка тема листа?">
-			<br><br> <textarea name="message" id="" cols="30" rows="10" placeholder="Повідомлення..." required></textarea>
-			<br><br> <button>Відправити</button>
-		</div> <!-- .form-wrapper -->
+            .list > a,
+            body > a {
+                font-size: 20px;
+                color: blue;
+                padding: 10px 30px;
+                display: block;
+                text-decoration: none;
+            }
+            label {
+                cursor: pointer;
+            }
+            input[type="checkbox"] {
+                margin: 0px 3px 0px 0;
+                position: relative;
+                top: 2px;
+                height: 14px;
+                width: 14px;
+                cursor: pointer;
+            }
+            .title {
+                font-size: 14px;
+                color: #888;
+                margin: 45px 0 5px 30px;
+                font-family: Tahoma;
+                text-transform: uppercase;
+                letter-spacing: .8px;
+            }
+            .active-lesson {
+                /* background-color: #f3f3f3d9; */
+                position: relative;
+            }
+            .active-lesson * {
+                position: relative;
+                z-index: 2;
+            }
+            .active-lesson::before {
+                content: '';
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: .1;
+            }
+            .list {
+                padding: 30px 0 40px;
+                border-bottom: 1px solid rgba(0, 0, 0, .18);
+            }
+            .list > a:first-child {
+                padding-bottom: 15px;
+                font-size: 20px;
+            }
+            .list > a {
+                font-size: 18px;
+            }
+            .list .note {
+                margin: 0 0 0 55px;
+                font-size: 15px;
+                color: #444;
+                line-height: 1.72;
+                margin-bottom: 22px;
+            }
+            .mt-50 {
+                margin-top: 50px;
+            }
+            .pb-20 {
+                padding-bottom: 20px;
+            }
+            .pb-15 {
+                padding-bottom: 15px;
+            }
+            .pb-10 {
+                padding-bottom: 10px;
+            }
+            .pb-none {
+                padding-bottom: 0;
+            }
+            .bdb-none {
+                border-bottom: none;
+            }
+        </style>
+    </head>
+    <body>
+        
+        
+        <!-- <p class="title">Верстаємо шаблон з the,eforest</p>
+        <div class="list">
+            <a href="https://demo3.drfuri.com/supro2/home-modern/?home_style=4" target="_blank">Supro 2 Minimalist</a>
+        </div> -->
+        
+        
+        <p class="title">Вивчаємо jquery плагіни</p>
+        <div class="list">
+            <a href="https://jquery.com/" target="_blank">Jquery (офіційний сайт)</a>
+            <p class="note">
+                <a href="https://kenwheeler.github.io/slick/" target="_blank">Slick (Плагін галереї)</a> <br />
+                <a href="https://sachinchoolur.github.io/lightgallery.js/" target="_blank">Lightgallery (Плагін перегляду фото)</a> <br />
+            </p>
+        </div>
+        
+        
+        <p class="title">Вивчаємо javascript</p>
+        <div class="list">
+            <p class="note">
+                <a href="https://developer.mozilla.org/ru/" target="_blank">Офіційна документація</a> <br>
+                <a href="https://www.w3schools.com/js/default.asp" target="_blank">w3schools документація</a> <br>
+                <a href="https://learn.javascript.ru/function-basics" target="_blank">Ще одна документація</a> <br>
+                <a href="http://яваскрипт.укр/%D0%B7%D0%BC%D1%96%D1%81%D1%82" target="_blank">Довідник JavaScript</a>
+            </p>
+        </div>
+        
+        
+        <p class="title">Верстаємо повноцінний сайт</p>
+        <div class="list">
+            <a href="https://www.figma.com/file/U0gPO5TTOy5hFLHt4z2OOS/Landing-Page-%234-(Community)" target="_blank">Landing page</a>
+        </div>
+        
+        
+        <p class="title">Урок 8: Вчимо svg</p>
+        <div class="list">
+            <a href="https://www.figma.com/file/diN7O8fowoI3qsnrGAOHv8/Untitled" target="_blank">Верстаємо заголовки</a>
+            <p class="note">
+                <a href="https://www.figma.com/file/r0hYmFNqz8gsCg5KpHbNee/Modal-dialogs-(after-%26-before%2C-position)" target="_blank">Домашнє завдання</a>
+            </p>
+        </div>
+        
+        
+        <p class="title">Урок 7: Вчимо before & after</p>
+        <div class="list">
+            <a href="https://www.figma.com/file/OSkggb6g0co7I17sSAun7l/%D0%92%D1%87%D0%B8%D0%BC%D0%BE-before-%26-after" target="_blank">Верстаємо заголовки</a>
+            <a href="https://www.figma.com/file/2bYMBCTvaWWLydltFZvcmx/%D0%92%D1%87%D0%B8%D0%BC%D0%BE-%D0%B2%D0%B7%D0%B0%D0%BC%D0%BE%D0%B4%D1%96%D1%8E-%D0%B7-class" target="_blank">Вивчаємо взаємодію з class</a>
+        </div>
+        
+        
+        <p class="title">Урок 6: Вчимо position</p>
+        <div class="list">
+            <a href="https://www.figma.com/file/tZPMH0Qw4IbQ8JohOECrMT/%D0%92%D1%87%D0%B8%D0%BC%D0%BE-position" target="_blank">Верстаємо аватарки</a>
+            <p class="note">
+                <a href="https://www.figma.com/file/z7ovV8PIoXkpjigdslALZZ/Landing-Page" target="_blank">Домашнє завдання</a>
+            </p>
+        </div>
+        
+        
+        <p class="title">Урок 5: Вивчаємо Flex</p>
+        <div class="list">
+            <a href="https://www.figma.com/file/5IItWSG9wAjNDN81k7PqI4/%D0%92%D0%B8%D0%B2%D1%87%D0%B0%D1%94%D0%BC%D0%BE-Flex" target="_blank">Презентаційна сторінка продажі пакету ілюстрацій</a>
+            <p class="note">
+                <a href="https://flexboxfroggy.com/#uk" target="_blank">Гра на вивчення Flex</a>
+            </p>
+        </div>
+        
+        
+        <p class="title">Урок 4: Вивчаємо background</p>
+        <div class="list">
+            <a href="https://www.figma.com/file/lyKYlEQlSauzt0wY9mp5Lx/%D0%92%D0%B8%D0%B2%D1%87%D0%B0%D1%94%D0%BC%D0%BE-background" target="_blank">Landing page (відео-монтаж)</a>
+        </div>
 
-		<p class="js-success-send" style="display: none;">Успішно віправлено</p>
+        
+        <p class="title">Урок 3: Версткаємо сторінку порядки</p>
+        <div class="list">
+            <a href="https://www.figma.com/file/9ui4b2E3MDDTWtTO7hhb4I/%D0%A1%D1%82%D0%BE%D1%80%D1%96%D0%BD%D0%BA%D0%B0-%D0%BF%D0%BE%D0%B4%D1%8F%D0%BA%D0%B8" target="_blank">Сторінка подяки (Figma)</a>
+        </div>
+        
+        
+        <p class="title">Макет для самостійної верстки</p>
+        <div class="list">
+            <a href="https://www.figma.com/file/KzxGgHSlHUH049olh4R9bG/Test_Task_Developers-(landing-page)" target="_blank">Landing page для самостійної верстки</a>
+            <a href="https://www.figma.com/file/w9OeoFJ4osR2bdBSD8aUDy/Feha-LLC-Landing-Page-(Community)-(Copy)" target="_blank">Багатосторінковия сайт</a>
+        </div>
+        
 
-	</form>
-
-
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-	<script src="script.js"></script>
-	
-</body>
+        <p class="title">Корисні посилання:</p>
+        <div class="list list-links bdb-none">
+            <a href="https://css.in.ua/" target="_blank">Документація HTML-CSS</a>
+            <a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Шпаргалка Emmet</a>
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Шпаргалка flexbox</a>
+            <a href="https://caniuse.com/" target="_blank">Can I use</a>
+            
+            <a href="https://picsum.photos/" target="_blank">Генератор картинок</a>
+            
+            <a href="https://feathericons.com/" target="_blank">Набір svg іконок feathericons</a>
+            <a href="https://www.flaticon.com/" target="_blank">Сервіс іконок flaticon</a>
+            
+            <a href="https://www.hostinger.com/free-hosting" target="_blank">Безкоштовний хостинг</a>
+            <!-- <a href="https://inderio.com/sendForm.php" target="_blank">Обробка данних форми</a> -->
+            <!-- <a href="https://inderio.com/else/lessons/ajaxSendEmail.zip" target="_blank" download>Php файл відправки форми</a> -->
+            <!-- <a href="https://tinypng.com/" target="_blank">Сервіс очистки png картинок</a> -->
+            
+            
+        </div>
+    </body>
 </html>
